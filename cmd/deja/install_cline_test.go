@@ -235,9 +235,9 @@ func TestClineUninstallKeepsFilesBesideThePlugin(t *testing.T) {
 		t.Fatalf("install: %v", err)
 	}
 	stays := map[string]string{
-		filepath.Join(dir, "notes", "todo.md"):             "mine\n",
-		filepath.Join(dir, "mine.txt"):                     "a file only the reader wrote\n",
-		filepath.Join(dir, "index.js.bak"):                 "an older plugin\n",
+		filepath.Join(dir, "notes", "todo.md"):                   "mine\n",
+		filepath.Join(dir, "mine.txt"):                           "a file only the reader wrote\n",
+		filepath.Join(dir, "index.js.bak"):                       "an older plugin\n",
 		filepath.Join(dir, "skills", "deja-history", "RULES.md"): "the reader's own file\n",
 	}
 	for path, body := range stays {
